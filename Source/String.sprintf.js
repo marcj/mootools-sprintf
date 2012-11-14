@@ -50,7 +50,6 @@ provides: [String.sprintf]
             //  2 = optional parameter
             //  3 = code
             //
-            console.log(code);
 
             if (!code){
                 cursorPosition++;
@@ -85,8 +84,6 @@ provides: [String.sprintf]
                         opt = code[2].search(/[\-1-9]/);
                         char = code[2].substr(0, opt) || ' ';
                     }
-                    console.log(code[2]);
-                    console.log(char);
 
                     opt = code[2].substr(opt, code[2].length);
 
