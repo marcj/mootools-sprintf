@@ -1,4 +1,5 @@
-#Javascript sprintf for mootools
+Javascript sprintf for mootools
+===============================
 
 This is just a small function, that provides almost the same as php's sprintf.
 
@@ -45,13 +46,15 @@ Just use for example following to output the first argument as string again.
 
 ```
 
-#More information
+More information
+----------------
 
 Please take a look at this page: http://www.php.net/manual/en/function.sprintf.php
 to get more information about the possibilities.
 
 
-#Requirements
+Requirements
+------------
 
  - Mootools core.
  - Mootools more String.Extras repeat. (more/String.Extras)
