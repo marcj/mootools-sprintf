@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mootools-sprintf by MArcJ</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mootools-sprintf</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/MArcJ/mootools-sprintf">View the Project on GitHub <small>MArcJ/mootools-sprintf</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/MArcJ/mootools-sprintf/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/MArcJ/mootools-sprintf/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/MArcJ/mootools-sprintf">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Javascript sprintf for mootools</h1>
+
+<p>This is just a small function, that provides almost the same as php's sprintf.</p>
+
+<p>Take a look at the docu of php's sprintf to get more informationen about the possibilities.</p>
+
+<h1>Usage</h1>
+
+<div class="highlight"><pre>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hi %s, you have %d new messages!"</span><span class="p">.</span><span class="nx">sprintf</span><span class="p">(</span><span class="s1">'Peter'</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">//Hi Peter, you have 3 new messages!</span>
+
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"My name is %s and I'm %s, because I'm %1$s"</span><span class="p">.;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">sprintf</span><span class="p">(</span><span class="s1">'Peter'</span><span class="p">,</span> <span class="s1">'holy'</span><span class="p">));</span> <span class="c1">//My name is Peter and I'm holy, because I'm Peter</span>
+
+</pre></div>
+
+<h1>Possible types:</h1>
+
+<ul>
+<li>% - a literal percent character. No argument is required.</li>
+<li>b - the argument is treated as an integer, and presented as a binary number.</li>
+<li>c - the argument is treated as an integer, and presented as the character with that ASCII value.</li>
+<li>d - the argument is treated as an integer, and presented as a (signed) decimal number.</li>
+<li>e - the argument is treated as scientific notation (e.g. 1.2e+2).</li>
+<li>E - like %e but uses uppercase letter (e.g. 1.2E+2).</li>
+<li>u - the argument is treated as an integer, and presented as an unsigned decimal number.</li>
+<li>f - the argument is treated as a float, and presented as a floating-point number.</li>
+<li>o - the argument is treated as an integer, and presented as an octal number.</li>
+<li>s - the argument is treated as and presented as a string.</li>
+<li>x - the argument is treated as an integer and presented as a hexadecimal number (with lowercase letters).</li>
+<li>X - the argument is treated as an integer and presented as a hexadecimal number (with uppercase letters).</li>
+</ul><p>Text Copyright by <a href="http://www.php.net/manual/en/function.sprintf.php">http://www.php.net/manual/en/function.sprintf.php</a></p>
+
+<h1>Argument swapping</h1>
+
+<p>This function supports argument swapping, which means, you can use a argument as many as you want in the text.
+Just use for example following to output the first argument as string again.</p>
+
+<div class="highlight"><pre>
+<span class="s2">"Si, glamour is %s, or is it not %1$s?"</span><span class="p">.</span><span class="nx">sprintf</span><span class="p">(</span><span class="s1">'useless'</span><span class="p">);</span>
+
+</pre></div>
+
+<h1>More information</h1>
+
+<p>Please take a look at this page: <a href="http://www.php.net/manual/en/function.sprintf.php">http://www.php.net/manual/en/function.sprintf.php</a>
+to get more information about the possibilities.</p>
+
+<h1>Requirements</h1>
+
+<ul>
+<li>Mootools core.</li>
+<li>Mootools more String.Extras repeat. (more/String.Extras)</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/MArcJ">MArcJ</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
