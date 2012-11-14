@@ -2,5 +2,5 @@ name: String.sprintf
 author: MArcJ
 category: Native
 tags: [String, sprintf, printf]
-demo: 
+demo: http://marcj.github.com/mootools-sprintf/ 
 current: 0.1
