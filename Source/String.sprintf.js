@@ -12,6 +12,8 @@ requires:
 - More 'String.Extra'
 
 provides: [String.sprintf]
+
+...
 */
 
 
