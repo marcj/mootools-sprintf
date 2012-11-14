@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="ext/html; charset=utf-8" />
+    <title>Mootools sprintf</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+    <script src="https://raw.github.com/mootools/mootools-more/master/Source/Types/String.Extras.js"></script>
+    <script src="../Source/String.sprintf.js"></script>
+    <style type="text/css">
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .cmd {
+            color: gray;
+        }
+
+        .result-red,
+        .result-green {
+            margin-bottom: 7px;
+            padding-bottom:7px;
+            border-bottom: 1px dotted silver;
+        }
+
+        .result-red {
+            color: red;
+        }
+        .result-green {
+            color: green;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mootools sprintf Test</h2>
+    
+    <script>
+
+        var cmds = {
+            "Hi %s, you have %d messages!": {
+                args: ['Peter', 4],
+                shouldBe: "Hi Peter, you have 4 messages!"
+            },
+            "Hi %s, are you really %1$s?": {
+                args: ['Peter'],
+                shouldBe: "Hi Peter, are you really Peter?"
+            },
+            "%2.2f CPU Utilization (~%1$d%%), %1$.3f": {
+                args: [5.432],
+                shouldBe: "05.43 CPU Utilization (~5%), 5.432"
+            },
+            "[%20s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[PeterMowla          ]"
+            },
+            "[%-20s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[          PeterMowla]"
+            },
+            "[%-20.5s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[               Peter]"
+            },
+            "[%20.5s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[Peter               ]"
+            },
+            "[%'.20.5s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[Peter...............]"
+            },
+            "[%'.-20.5s]": {
+                args: ['PeterMowla'],
+                shouldBe: "[...............Peter]"
+            },
+            "555 hex - %x": {
+                args: [555],
+                shouldBe: "555 hex - 22b"
+            },
+            "555 hex - %X": {
+                args: [555],
+                shouldBe: "555 hex - 22B"
+            },
+            "555 scientific - %e": {
+                args: [555],
+                shouldBe: "555 scientific - 5.55e+2"
+            },
+            "ASCII %c%c%c%c%c": {
+                args: [72,97,108,108,111],
+                shouldBe: "ASCII Hallo"
+            },
+            "555 binary - %b": {
+                args: [555],
+                shouldBe: "555 binary - 1000101011"
+            },
+            "-555 unsigned - %u": {
+                args: [-555],
+                shouldBe: "-555 unsigned - 4294966741"
+            }
+        };
+
+        document.open();
+        document.write('<pre>');
+        var result = '',
+            someoneFailed = false;
+
+        Object.each(cmds, function(options, text){
+
+            if (result!==options.shouldBe) someoneFailed = true;
+
+            result = text.sprintf.apply(text, options.args);
+            document.write('['+(result===options.shouldBe?'CORRECT':'FAILED')+']<br />');
+            document.write('<div class="cmd">"'+text+'".sprintf('+options.args.join(', ')+')</div>');
+            document.write('<div class="result-'+(result===options.shouldBe?'green':'red')+'"=> '+result+'</div>');
+
+        });
+
+        document.write('</pre>');      
+
+        if (!someoneFailed){
+
+            document.write('<h2>Please write a ticket!</h2>');
+            document.write('Since there is an error somehow in the function, please let us know this with some couple of extra information.<br />');
+            document.write('=> <a href="https://github.com/MArcJ/mootools-sprintf/issues/new">Create ticket @github</a> with the output of above and your browser (+Version).<br />');
+            document.write('If you get an error in your browser error console, please put the output of this in the ticket too. Thanks!');
+
+
+        }
+
+        document.close();
+
+
+    </script>
+
+</body>
+</html>
