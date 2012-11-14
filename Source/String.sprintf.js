@@ -1,3 +1,12 @@
+/**
+ * String.sprintf
+ *
+ * A sprintf function in mootools.
+ *
+ * Copyright (c) MArc J. Schmidt, <http://marcschmidt.name/>
+ *
+ */
+
 (function(){
 
     function sprintf(){
@@ -22,7 +31,7 @@
             //  1 = argument numbering
             //  2 = optional parameter
             //  3 = code
-            // 
+            //
             console.log(code);
 
             if (!code){
