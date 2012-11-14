@@ -1,3 +1,20 @@
+/*
+---
+description: String.sprintf
+
+license: MIT-style
+
+authors:
+- MArc J. Schmidt
+
+requires:
+- Core
+- More 'String.Extra'
+
+provides: [String.sprintf]
+*/
+
+
 /**
  * String.sprintf
  *
@@ -6,7 +23,6 @@
  * Copyright (c) MArc J. Schmidt, <http://marcschmidt.name/>
  *
  */
-
 (function(){
 
     function sprintf(){
