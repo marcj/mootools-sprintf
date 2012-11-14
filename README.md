@@ -1,10 +1,10 @@
-* Javascript sprintf for mootools
+# Javascript sprintf for mootools
 
 This is just a small function, that provides almost the same as php's sprintf.
 
 Take a look at the docu of php's sprintf to get more informationen about the possibilities.
 
-* Usage
+# Usage
 
 ```javascript
 
@@ -15,7 +15,7 @@ console.log(text.sprintf('Peter', 'holy')); //My name is Peter and I'm holy, bec
 
 ```
 
-* Possible types:
+# Possible types:
 
  - % - a literal percent character. No argument is required.
  - b - the argument is treated as an integer, and presented as a binary number.
@@ -32,7 +32,7 @@ console.log(text.sprintf('Peter', 'holy')); //My name is Peter and I'm holy, bec
 
 Text Copyright by http://www.php.net/manual/en/function.sprintf.php
 
-* Argument swapping
+# Argument swapping
 
 This function supports argument swapping, which means, you can use a argument as many as you want in the text.
 Just use for example following to output the first argument as string again.
@@ -43,13 +43,13 @@ Just use for example following to output the first argument as string again.
 
 ```
 
-* More information
+# More information
 
 Please take a look at this page: http://www.php.net/manual/en/function.sprintf.php
 to get more information about the possibilities.
 
 
-* Requirements
+# Requirements
 
  - Mootools core.
  - Mootools more String.Extras repeat. (more/String.Extras)
