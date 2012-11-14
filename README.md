@@ -4,7 +4,8 @@ This is just a small function, that provides almost the same as php's sprintf.
 
 Take a look at the docu of php's sprintf to get more informationen about the possibilities.
 
-#How to Use
+How to Use
+----------
 
 ```javascript
 
